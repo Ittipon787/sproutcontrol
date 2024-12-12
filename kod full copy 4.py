@@ -173,7 +173,7 @@ class WateringSystem:
 
                 # GPIO.output(RELAY_PIN5, GPIO.HIGH)
                 # print("พัดลมระบายอากาศ กำลังทำงาน")
-                # time.sleep(timfanW*60)
+                time.sleep(timfanW*60)
 
                 # GPIO.output(RELAY_PIN5, GPIO.LOW)
                 # print("พัดลมระบายอากาศ หยุดทำงาน")
@@ -328,7 +328,7 @@ class WateringSystem:
         entry_temH.insert(0, "36")
         entry_temL.insert(0, "32")
         entry_timW.insert(0, "12")
-        # entry_timfanW.insert(0, "18")
+        entry_timfanW.insert(0, "18")
 
         # ตำแหน่ง Entry ในหน้าต่าง
         entry_temH.grid(row=0, column=1)
@@ -377,10 +377,10 @@ class WateringSystem:
         label_timfanW.grid(row=3, column=0)
 
 # เริ่มการทำงานของโปรแกรม
-    def exitprogram(self):
-        self.cleanup_gpio()
-        root.destroy()
-        os.system("sudo shutdown -h now")
+    # def exitprogram(self):
+    #     self.cleanup_gpio()
+    #     root.destroy()
+    #     os.system("sudo shutdown -h now")
 
 
 root = tk.Tk()
